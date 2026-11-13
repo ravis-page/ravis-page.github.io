@@ -12,17 +12,15 @@
 <h1>Raster-Free View Synthesis with Point-Anchored Geometric Embeddings</h1>
 <p>Anonymous supplementary material (ICLR 2027 submission 28003).</p>
 <h2>Comparison with baselines along smooth camera paths</h2>
-<p>LVSM, LagerNVS, PVSM and RaViS rendered along the same 90-frame RealEstate10K camera paths (context 0 &rarr; a real target view with large disocclusion &rarr; context 1), with a fixed context set.
-Baselines use their official checkpoints with dataset cameras, as in Table 1; RaViS uses its fixed GFM predictions. Trajectory numbers match the next section.</p>
+<p>LVSM, LagerNVS, PVSM and RaViS rendered along the same 90-frame camera paths (context view &rarr; a real target view &rarr; context view) with a fixed context set.
+DL3DV uses 4 context views at 256&times;448 and the models of Table 2, which all share the same VGGT-&Omega; camera predictions.
+RealEstate10K uses 2 context views and the official checkpoints with dataset cameras, as in Table 1.</p>
 <div class="grid">
-    <figure><video src="videos/re10k_cmp_1.mp4" autoplay loop muted playsinline controls></video><figcaption>Trajectory 1</figcaption></figure>
-    <figure><video src="videos/re10k_cmp_2.mp4" autoplay loop muted playsinline controls></video><figcaption>Trajectory 2</figcaption></figure>
-    <figure><video src="videos/re10k_cmp_3.mp4" autoplay loop muted playsinline controls></video><figcaption>Trajectory 3</figcaption></figure>
-    <figure><video src="videos/re10k_cmp_4.mp4" autoplay loop muted playsinline controls></video><figcaption>Trajectory 4</figcaption></figure>
-    <figure><video src="videos/re10k_cmp_5.mp4" autoplay loop muted playsinline controls></video><figcaption>Trajectory 5</figcaption></figure>
-    <figure><video src="videos/re10k_cmp_6.mp4" autoplay loop muted playsinline controls></video><figcaption>Trajectory 6</figcaption></figure>
-    <figure><video src="videos/re10k_cmp_7.mp4" autoplay loop muted playsinline controls></video><figcaption>Trajectory 7</figcaption></figure>
-    <figure><video src="videos/re10k_cmp_8.mp4" autoplay loop muted playsinline controls></video><figcaption>Trajectory 8</figcaption></figure>
+    <figure><video src="videos/cmp_1.mp4" autoplay loop muted playsinline controls></video><figcaption>DL3DV 1</figcaption></figure>
+    <figure><video src="videos/cmp_2.mp4" autoplay loop muted playsinline controls></video><figcaption>DL3DV 2</figcaption></figure>
+    <figure><video src="videos/cmp_3.mp4" autoplay loop muted playsinline controls></video><figcaption>DL3DV 3</figcaption></figure>
+    <figure><video src="videos/cmp_4.mp4" autoplay loop muted playsinline controls></video><figcaption>RealEstate10K 1</figcaption></figure>
+    <figure><video src="videos/cmp_5.mp4" autoplay loop muted playsinline controls></video><figcaption>RealEstate10K 2</figcaption></figure>
 </div>
 <h2>RaViS along smooth camera paths with fixed context and fixed GFM predictions</h2>
 <p>For each RealEstate10K scene, the two context views and the GFM (VGGT-&Omega;) predictions (poses, depth, features) are computed once and kept fixed.
