@@ -11,7 +11,20 @@
 </style></head><body>
 <h1>Raster-Free View Synthesis with Point-Anchored Geometric Embeddings</h1>
 <p>Anonymous supplementary material (ICLR 2027 submission 28003).</p>
-<h2>Smooth camera paths with fixed context and fixed GFM predictions</h2>
+<h2>Comparison with baselines along smooth camera paths</h2>
+<p>LVSM, LagerNVS, PVSM and RaViS rendered along the same 90-frame RealEstate10K camera paths (context 0 &rarr; a real target view with large disocclusion &rarr; context 1), with a fixed context set.
+Baselines use their official checkpoints with dataset cameras, as in Table 1; RaViS uses its fixed GFM predictions. Trajectory numbers match the next section.</p>
+<div class="grid">
+    <figure><video src="videos/re10k_cmp_1.mp4" autoplay loop muted playsinline controls></video><figcaption>Trajectory 1</figcaption></figure>
+    <figure><video src="videos/re10k_cmp_2.mp4" autoplay loop muted playsinline controls></video><figcaption>Trajectory 2</figcaption></figure>
+    <figure><video src="videos/re10k_cmp_3.mp4" autoplay loop muted playsinline controls></video><figcaption>Trajectory 3</figcaption></figure>
+    <figure><video src="videos/re10k_cmp_4.mp4" autoplay loop muted playsinline controls></video><figcaption>Trajectory 4</figcaption></figure>
+    <figure><video src="videos/re10k_cmp_5.mp4" autoplay loop muted playsinline controls></video><figcaption>Trajectory 5</figcaption></figure>
+    <figure><video src="videos/re10k_cmp_6.mp4" autoplay loop muted playsinline controls></video><figcaption>Trajectory 6</figcaption></figure>
+    <figure><video src="videos/re10k_cmp_7.mp4" autoplay loop muted playsinline controls></video><figcaption>Trajectory 7</figcaption></figure>
+    <figure><video src="videos/re10k_cmp_8.mp4" autoplay loop muted playsinline controls></video><figcaption>Trajectory 8</figcaption></figure>
+</div>
+<h2>RaViS along smooth camera paths with fixed context and fixed GFM predictions</h2>
 <p>For each RealEstate10K scene, the two context views and the GFM (VGGT-&Omega;) predictions (poses, depth, features) are computed once and kept fixed.
 Only the target camera moves along a 90-frame path: context 0 &rarr; a real target view with large disocclusion &rarr; context 1
 (rotation slerp, linear translation). Each video shows, from left to right:</p>
