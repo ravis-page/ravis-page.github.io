@@ -16,11 +16,11 @@
 DL3DV uses 4 context views at 256&times;448 and the models of Table 2, which all share the same VGGT-&Omega; camera predictions.
 RealEstate10K uses 2 context views and the official checkpoints with dataset cameras, as in Table 1.</p>
 <div class="grid">
-    <figure><video src="videos/cmp_1.mp4" autoplay loop muted playsinline controls></video><figcaption>DL3DV 1</figcaption></figure>
-    <figure><video src="videos/cmp_2.mp4" autoplay loop muted playsinline controls></video><figcaption>DL3DV 2</figcaption></figure>
-    <figure><video src="videos/cmp_3.mp4" autoplay loop muted playsinline controls></video><figcaption>DL3DV 3</figcaption></figure>
-    <figure><video src="videos/cmp_4.mp4" autoplay loop muted playsinline controls></video><figcaption>RealEstate10K 1</figcaption></figure>
-    <figure><video src="videos/cmp_5.mp4" autoplay loop muted playsinline controls></video><figcaption>RealEstate10K 2</figcaption></figure>
+    <figure><video src="videos/cmp_1.mp4" autoplay loop muted playsinline controls></video></figure>
+    <figure><video src="videos/cmp_2.mp4" autoplay loop muted playsinline controls></video></figure>
+    <figure><video src="videos/cmp_3.mp4" autoplay loop muted playsinline controls></video></figure>
+    <figure><video src="videos/cmp_4.mp4" autoplay loop muted playsinline controls></video></figure>
+    <figure><video src="videos/cmp_5.mp4" autoplay loop muted playsinline controls></video></figure>
 </div>
 <h2>RaViS along smooth camera paths with fixed context and fixed GFM predictions</h2>
 <p>For each RealEstate10K scene, the two context views and the GFM (VGGT-&Omega;) predictions (poses, depth, features) are computed once and kept fixed.
@@ -28,18 +28,18 @@ Only the target camera moves along a 90-frame path: context 0 &rarr; a real targ
 (rotation slerp, linear translation). Each video shows, from left to right:</p>
 <div class="legend"><div>RaViS rendering</div><div>Projected context depth</div><div>Fallback patches (red)</div></div>
 <div class="grid">
-    <figure><video src="videos/re10k_traj_1.mp4" autoplay loop muted playsinline controls></video><figcaption>Trajectory 1</figcaption></figure>
-    <figure><video src="videos/re10k_traj_3.mp4" autoplay loop muted playsinline controls></video><figcaption>Trajectory 3</figcaption></figure>
-    <figure><video src="videos/re10k_traj_4.mp4" autoplay loop muted playsinline controls></video><figcaption>Trajectory 4</figcaption></figure>
-    <figure><video src="videos/re10k_traj_6.mp4" autoplay loop muted playsinline controls></video><figcaption>Trajectory 6</figcaption></figure>
+    <figure><video src="videos/re10k_traj_1.mp4" autoplay loop muted playsinline controls></video></figure>
+    <figure><video src="videos/re10k_traj_3.mp4" autoplay loop muted playsinline controls></video></figure>
+    <figure><video src="videos/re10k_traj_4.mp4" autoplay loop muted playsinline controls></video></figure>
+    <figure><video src="videos/re10k_traj_6.mp4" autoplay loop muted playsinline controls></video></figure>
 </div>
 <h2>Zero-shot: switching between nearest context views</h2>
 <p>Zero-shot protocol of Table 3 (DL3DV-trained model, 16 context views selected by K-means, each frame rendered from its 4 nearest context views, GFM-estimated poses).
 We render 120 consecutive captured frames, so the set of nearest context views changes as the camera moves.
 Each video shows the RaViS rendering (left) and the ground truth (right). A <span style="color:#e61e1e;font-weight:600">red border</span> marks frames where the nearest-context set has just changed.</p>
 <div class="grid">
-    <figure><video src="videos/zs_mipnerf360_garden.mp4" autoplay loop muted playsinline controls></video><figcaption>MipNeRF360 garden</figcaption></figure>
-    <figure><video src="videos/zs_mipnerf360_kitchen.mp4" autoplay loop muted playsinline controls></video><figcaption>MipNeRF360 kitchen</figcaption></figure>
-    <figure><video src="videos/zs_free_road.mp4" autoplay loop muted playsinline controls></video><figcaption>Free road</figcaption></figure>
+    <figure><video src="videos/zs_mipnerf360_garden.mp4" autoplay loop muted playsinline controls></video></figure>
+    <figure><video src="videos/zs_mipnerf360_kitchen.mp4" autoplay loop muted playsinline controls></video></figure>
+    <figure><video src="videos/zs_free_road.mp4" autoplay loop muted playsinline controls></video></figure>
 </div>
 </body></html>
