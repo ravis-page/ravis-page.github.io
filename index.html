@@ -26,4 +26,16 @@ Only the target camera moves along a 90-frame path: context 0 &rarr; a real targ
     <figure><video src="videos/re10k_traj_7.mp4" autoplay loop muted playsinline controls></video><figcaption>Trajectory 7</figcaption></figure>
     <figure><video src="videos/re10k_traj_8.mp4" autoplay loop muted playsinline controls></video><figcaption>Trajectory 8</figcaption></figure>
 </div>
+<h2>Zero-shot: switching between nearest context views</h2>
+<p>Zero-shot protocol of Table 3 (DL3DV-trained model, 16 context views selected by K-means, each frame rendered from its 4 nearest context views, GFM-estimated poses).
+We render 120 consecutive captured frames, so the set of nearest context views changes as the camera moves.
+Each video shows the RaViS rendering (left) and the ground truth (right). A <span style="color:#e61e1e;font-weight:600">red border</span> marks frames where the nearest-context set has just changed.</p>
+<div class="grid">
+    <figure><video src="videos/zs_mipnerf360_bicycle.mp4" autoplay loop muted playsinline controls></video><figcaption>MipNeRF360 bicycle</figcaption></figure>
+    <figure><video src="videos/zs_mipnerf360_garden.mp4" autoplay loop muted playsinline controls></video><figcaption>MipNeRF360 garden</figcaption></figure>
+    <figure><video src="videos/zs_mipnerf360_kitchen.mp4" autoplay loop muted playsinline controls></video><figcaption>MipNeRF360 kitchen</figcaption></figure>
+    <figure><video src="videos/zs_free_lab.mp4" autoplay loop muted playsinline controls></video><figcaption>Free lab</figcaption></figure>
+    <figure><video src="videos/zs_free_road.mp4" autoplay loop muted playsinline controls></video><figcaption>Free road</figcaption></figure>
+    <figure><video src="videos/zs_hike_university1.mp4" autoplay loop muted playsinline controls></video><figcaption>Hike university1</figcaption></figure>
+</div>
 </body></html>
